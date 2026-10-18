@@ -1,0 +1,4 @@
+id,name,category,description,phone,url,eligibility,verification_date,notes
+211oc,211 Orange County,housing,"Community resource navigation, housing and other needs",211,https://211oc.org/get-help/,Ask specialist for program-specific criteria,2026-10-18,Not a shelter placement guarantee
+ces,Orange County Coordinated Entry System,housing,Housing assessment and referral coordination,211,https://ceo.oc.gov/care-coordination/homeless-services/coordinated-entry-system-ces,Access via CES Access Point; placement not guaranteed,2026-10-18,Ask existing provider for CES connection
+workforce,OC Workforce Solutions,work,Job search and career services,866-500-6587,https://www.ocworkforcesolutions.com/finding-a-job/find-a-job,Confirm intake and eligibility for specific services,2026-10-18,Free job-search services
