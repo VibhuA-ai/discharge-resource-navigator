@@ -1,0 +1,87 @@
+# Executive Summary
+## IHH NextDoor — AI-Assisted Client Resource Navigator
+
+### Project Objective
+Developed **IHH NextDoor**, a free, web-based resource navigation prototype designed to help individuals transitioning out of recuperative care identify relevant community resources, overcome access barriers, and receive personalized next-step recommendations.
+
+The solution focuses on four critical client needs: **housing, employment, financial assistance, and family reunification/transportation**.
+
+### Implementation Steps
+
+**1. Defined the Business Problem and Solution**
+
+Identified key challenges faced by IHH clients, including fragmented resource information, complex eligibility requirements, language barriers, and difficulty determining the next appropriate action.
+
+Designed a centralized resource navigation solution to simplify the transition from identifying a need to developing an actionable plan.
+
+**2. Established a Free Technology Platform**
+
+- Created a Python-based application using Streamlit.
+- Used GitHub for source-code management and GitHub Codespaces for development.
+- Configured the application for browser-based access.
+- Avoided paid AI APIs and infrastructure costs for the initial prototype.
+
+**3. Developed the Client Intake Workflow**
+
+Implemented a three-stage process:
+
+- **Client Profile:** Capture discharge timing, immediate needs, housing status, employment readiness, family support, and practical barriers.
+- **Resource Matching:** Identify and prioritize relevant resource starting points based on the client's circumstances.
+- **Action Plan:** Generate personalized next steps, contact information where available, and downloadable transition guidance.
+
+**4. Implemented Personalized Profile Analysis**
+
+Enhanced the application to analyze fictional or de-identified case notes and structured client information.
+
+The analysis identifies potential needs, detects barriers such as transportation and documentation, and prioritizes recommended actions based on urgency and client circumstances.
+
+The current implementation uses transparent, rule-based text analysis rather than a generative AI model.
+
+**5. Integrated Community Resource Navigation**
+
+Established an initial resource directory covering Orange County community assistance, housing navigation, and employment services.
+
+Implemented matching logic that connects identified client needs to relevant resource starting points, while flagging unverified eligibility, availability, and service gaps for staff follow-up.
+
+**6. Incorporated Safety and Human Oversight**
+
+- Added emergency escalation guidance and staff involvement requirements.
+- Prevented disclosure of confidential domestic violence shelter addresses.
+- Designed the tool to avoid inventing services or promising eligibility.
+- Restricted prototype testing to fictional or de-identified client profiles.
+- Kept referrals, calls, and applications outside the application's automated functionality.
+
+**7. Deployed and Enhanced the Prototype**
+
+Successfully launched the initial Streamlit interface through GitHub Codespaces and developed subsequent versions to improve workflow navigation, profile analysis, personalized recommendations, and action-plan generation.
+
+The enhanced version has been prepared for installation and further validation.
+
+### Solution Architecture
+
+**Client Profile / Case Notes → Needs and Barrier Identification → Priority-Based Resource Matching → Personalized Action Plan → IHH Staff Review**
+
+### Business Value
+
+| Capability | Expected benefit |
+|---|---|
+| Centralized resource navigation | Reduces fragmented resource searching |
+| Profile-based recommendations | Improves relevance of suggested assistance |
+| Urgency-based prioritization | Focuses attention on immediate transition needs |
+| Personalized action plans | Provides clients with clear next steps |
+| Staff escalation | Supports human oversight for complex cases |
+| Free development platform | Enables low-cost prototyping and iteration |
+
+### Current Status and Next Steps
+
+**Current status:** A functioning initial application was launched, and an enhanced profile-analysis prototype has been developed. The enhanced workflow, resource accuracy, accessibility, and real-world effectiveness still require validation.
+
+**Recommended next phase:** Integrate a privacy-approved language model for more sophisticated case-note interpretation, expand the verified Orange County resource database, complete multilingual support, and conduct structured testing with IHH staff using synthetic client scenarios.
+
+### Executive Takeaway
+
+IHH NextDoor demonstrates how a lightweight, low-cost decision-support application can translate fragmented community resource information into individualized transition guidance.
+
+The prototype establishes a foundation for an AI-enabled, human-supervised navigation solution that could help IHH clients leave recuperative care with clearer priorities, relevant resource starting points, and practical next actions.
+
+**The long-term objective is to move from resource discovery to successful resource connection, measured by client follow-through and verified service outcomes.**
