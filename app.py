@@ -3,7 +3,7 @@ from pathlib import Path
 import streamlit as st
 from matcher import assess, is_unsafe
 
-st.set_page_config(page_title='LandingPad', page_icon='🛬', layout='centered')
+st.set_page_config(page_title='Discharge Resource Navigator', page_icon='🧭', layout='centered')
 with (Path(__file__).parent/'data/resources.csv').open(encoding='utf-8', newline='') as f:
     RESOURCES = list(csv.DictReader(f))
 
@@ -14,7 +14,7 @@ WORDS = {
 }
 LABELS = {'housing':'Safe place to sleep / Vivienda / Chỗ ở', 'work':'Find work / Empleo / Việc làm', 'loan':'Small loan or financial help / Ayuda financiera / Hỗ trợ tài chính', 'family':'Return to family / Regresar con familia / Về với gia đình'}
 
-st.title('🛬 LandingPad')
+st.title('🧭 Discharge Resource Navigator')
 st.markdown('**Your next steps after recuperative care.** Built for Illumination Health + Home clients and case managers.')
 st.caption('Prototype • Orange County • No accounts, no paid AI, no external submissions')
 mode = st.radio('Mode', ['Client navigator', 'Case manager profile review'], horizontal=True)

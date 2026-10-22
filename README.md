@@ -1,10 +1,12 @@
-# LandingPad
+# Discharge Resource Navigator
 
 > For IHH clients leaving recuperative care, and the case managers helping them: answer a few
 > questions and get a short, sourced list of next steps for shelter, work, money and getting home.
 
 **Challenge:** 2, Finding the right resource
 **Built at:** Orange County | Claude Impact Lab, October 17, 2026, with Illumination Health + Home
+
+**[Architecture, workflow and safety](docs/ARCHITECTURE.md)**
 
 A **non-production** prototype. No paid AI, no accounts, no database. Nothing is sent to any
 provider: no calls, emails or referrals.
@@ -36,8 +38,8 @@ English, Spanish and Vietnamese labels (resource details and call scripts stay i
 Needs Python 3.10 or newer.
 
 ```bash
-git clone https://github.com/VibhuA-ai/landingpad.git
-cd landingpad
+git clone https://github.com/VibhuA-ai/discharge-resource-navigator.git
+cd discharge-resource-navigator
 python3 -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 streamlit run app.py

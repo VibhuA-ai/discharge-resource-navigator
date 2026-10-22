@@ -1,8 +1,8 @@
 # Executive Summary
-## LandingPad — AI-Assisted Client Resource Navigator
+## Discharge Resource Navigator — AI-Assisted Client Resource Navigator
 
 ### Project Objective
-Developed **LandingPad**, a free, web-based resource navigation prototype designed to help individuals transitioning out of recuperative care identify relevant community resources, overcome access barriers, and receive personalized next-step recommendations.
+Developed **Discharge Resource Navigator**, a free, web-based resource navigation prototype designed to help individuals transitioning out of recuperative care identify relevant community resources, overcome access barriers, and receive personalized next-step recommendations.
 
 The solution focuses on four critical client needs: **housing, employment, financial assistance, and family reunification/transportation**.
 
@@ -80,7 +80,7 @@ The enhanced version has been prepared for installation and further validation.
 
 ### Executive Takeaway
 
-LandingPad demonstrates how a lightweight, low-cost decision-support application can translate fragmented community resource information into individualized transition guidance.
+Discharge Resource Navigator demonstrates how a lightweight, low-cost decision-support application can translate fragmented community resource information into individualized transition guidance.
 
 The prototype establishes a foundation for an AI-enabled, human-supervised navigation solution that could help IHH clients leave recuperative care with clearer priorities, relevant resource starting points, and practical next actions.
 
