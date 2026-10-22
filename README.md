@@ -6,7 +6,7 @@
 **Challenge:** 2, Finding the right resource
 **Built at:** Orange County | Claude Impact Lab, October 17, 2026, with Illumination Health + Home
 
-**[Architecture, workflow and safety](docs/ARCHITECTURE.md)**
+**Try it now (no install):** https://vibhua-ai.github.io/discharge-resource-navigator/ · **[Architecture, workflow and safety](docs/ARCHITECTURE.md)**
 
 A **non-production** prototype. No paid AI, no accounts, no database. Nothing is sent to any
 provider: no calls, emails or referrals.
@@ -34,6 +34,14 @@ don't have.
 English, Spanish and Vietnamese labels (resource details and call scripts stay in English).
 
 ## Run it
+
+**In the browser:** open https://vibhua-ai.github.io/discharge-resource-navigator/. It uses
+[stlite](https://github.com/whitphx/stlite) to run this same Streamlit app inside the browser, so
+nothing you type leaves your device. The first load takes about 10 to 20 seconds while Python starts.
+`web/index.html` is the page; the Pages workflow copies `app.py`, `matcher.py` and
+`data/resources.csv` next to it unchanged.
+
+**On a laptop:**
 
 Needs Python 3.10 or newer.
 

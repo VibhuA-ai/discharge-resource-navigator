@@ -20,7 +20,7 @@ and hands it to staff instead of guessing.
 | **Input** | Needs (shelter, work, small loan, return to family) and 7 yes/no/unknown questions; optional de-identified summary (case manager mode) |
 | **Output** | Ordered next steps with source link, phone, "check before referral", call script, barriers for staff |
 | **AI** | None at run time. Matching is deterministic, explainable Python rules |
-| **Runs** | Streamlit on a laptop or GitHub Codespaces |
+| **Runs** | In the browser on GitHub Pages (Streamlit compiled to run client-side with stlite and Pyodide), or Streamlit on a laptop or GitHub Codespaces |
 
 ## 2. Workflow
 
@@ -59,6 +59,7 @@ flowchart TB
     SAFE -- safe --> ASSESS
     DATA --> ASSESS --> VIEW
     SAFE -- unsafe --> STOP[Escalation message]
+    PAGES[GitHub Pages: web/index.html<br/>stlite runs app.py in the browser] -.hosts.-> App
     NOLLM[No LLM, no network calls,<br/>no database, nothing sent] -.-> App
     FUT[Future, not built: optional LLM to propose<br/>structured needs from de-identified notes,<br/>staff confirms, LLM never creates service facts] -.-> ASSESS
     style FUT stroke-dasharray: 5 5
@@ -81,6 +82,9 @@ rule.
 ## 4. How it was implemented
 
 - **Stack:** Python, Streamlit for the UI, the standard `csv` module for data, pytest for tests.
+- **Browser demo:** `web/index.html` mounts the unchanged `app.py`, `matcher.py` and
+  `data/resources.csv` with stlite 1.9.2, which runs Streamlit on Pyodide (Python compiled to
+  WebAssembly). The Pages workflow runs the tests first, then publishes those files.
 - **Built during the event** in GitHub Codespaces, with no paid AI APIs. After the event, Claude
   (Claude Code) restored the complete app when `app.py` on main had been cut off, renamed it, and
   added tests that render the whole app.
@@ -98,7 +102,7 @@ rule.
 | Out-of-date or invented service facts | Only sourced records; source link and last-checked date shown on every step; "not live availability"; "check before referral" line; no program → explicit "staff to investigate" |
 | Promising help that may not exist | Status "Potential starting point; eligibility and availability not confirmed"; family travel requires consent, destination, receiving person, safety and funding confirmed by staff |
 | Client in danger | Safety stop replaces the plan with 911, National DV Hotline and "bring in IHH staff"; confidential shelter addresses never stored or shown |
-| Privacy | No accounts, no database, no network calls, nothing sent to providers; on-screen warning not to enter names, DOB or medical details; summary field is de-identified only and is not sent to any AI |
+| Privacy | No accounts, no database, nothing sent to providers; in the browser demo the app runs on the visitor's device and answers never leave it (the page only downloads stlite and Python from a public CDN); on-screen warning not to enter names, DOB or medical details; summary field is de-identified only and is not sent to any AI |
 | Over-trusting translation | Non-English users told that resource details and scripts remain in English and to ask for an interpreter |
 | Human oversight | "Decision support only. Human review required before any discharge or placement decision." on every plan |
 | Event rules | No connection to any IHH system; MIT license; open source |
